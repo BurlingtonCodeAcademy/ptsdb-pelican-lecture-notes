@@ -1,0 +1,36 @@
+h2 {
+  background-color: tomato;
+  margin-top: 2rem;
+}
+
+a {
+  color: black;
+  text-decoration: double 2px solid black;
+}
+
+img {
+  width: 40rem;
+  margin: 4rem;
+  border: 2px solid black;
+  box-shadow: 10px 10px 10px black;
+}
+
+
+.orange-box {
+  background-color: #e96739;
+  height: 200px;
+  width: 200px;
+  border: 10px solid rgb(82, 255, 101);
+  border-radius: 60px;
+  padding-left: 10rem
+}
+
+#boring-box {
+  background-color: #b0b0b0;
+  border-bottom: solid black 8px;
+}
+
+#boring-box > p {
+  margin-left: 20px;
+  padding-top: 20px;
+}

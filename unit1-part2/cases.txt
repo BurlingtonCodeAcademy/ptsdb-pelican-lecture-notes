@@ -1,0 +1,19 @@
+
+
+lowercase
+
+UPPERCASE
+
+Title Case
+
+
+
+
+this-is-kebab-case  =>  HTML/CSS classes and ids
+
+this_is_snake_case  =>  you will see this sometimes but not in web dev much
+
+thisIsCamelCase     =>  JavaScript!
+
+ThisIsPascalCase    =>  very specific instances in JavaScript
+
