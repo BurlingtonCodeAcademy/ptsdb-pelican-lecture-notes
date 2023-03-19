@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #e96739;
+  padding: screwdriver;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  font-size: 2rm;
+}
+
+nav {
+  background-color: #b5542e;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  display: inline;
+  margin-right: 1rem;
+  position: relative;
+}
+
+nav li:not(:last-child)::after {
+  content: "·";
+  color: white;
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 1rem;
+}
