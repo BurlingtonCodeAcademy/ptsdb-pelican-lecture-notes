@@ -1,0 +1,156 @@
+<style>
+  body {
+    background-color: darkblue;
+  }
+  h1,h2,h3,p {
+    color: yellow;
+  }
+
+  ol,ul {
+    color: lightgreen;
+  }
+
+  ol ol {
+    list-style-type: hiragana;
+    color: purple;
+  } 
+
+  ol ol ol {
+    list-style-type: lower-roman;
+    color: #dd5020;
+  }
+</style>
+<h1 id="markdown-lesson">Markdown Lesson</h1>
+<p>You can start writing content here. This content will update live in
+the preview to the side.</p>
+<h2 id="basic-p-tags">Basic <code>p</code> Tags</h2>
+<p>You can write each setence out in plain text, and Markdown will know
+to put it in a p tag. Notice that even though I broke a line, the text
+continues as though I had not! This allows us to write text and break
+lines however often we want in the source document and have it rendered
+in HTML as if we had written the whole paragraph coherently.</p>
+<h2 id="formatting-text">Formatting Text</h2>
+<p>To emphasize text, add <em>asterisks</em>! It’s <em>that</em>
+easy!</p>
+<p>Breaking two lines or more begins a new paragraph, btw.</p>
+<p>If you want to bold text (render as a strong element), you can use
+<strong>two asterisks</strong>!!</p>
+<p>And in those rare cases where you need to <em>italicize</em> and
+<strong>bold</strong> text, any guesses? <strong><em>THREE
+ASTERISKS</em></strong></p>
+<h2 id="lists">Lists!</h2>
+<p>To make an ordered list:</p>
+<ol type="1">
+<li>Start a list.</li>
+<li>That’s it!</li>
+</ol>
+<p>For an unordered list, you have some options…</p>
+<ul>
+<li>Usually, I use dashes.</li>
+<li>But you can use + or * for each list item as well.</li>
+<li>It</li>
+<li>is</li>
+<li>up</li>
+<li>to</li>
+<li>you.</li>
+</ul>
+<p>Oh, and also, if it makes sense to you visually, feel free to indent
+your lists.</p>
+<ul>
+<li>This is the same kind of list.</li>
+<li>But the indentation, it looks nicer.
+<ul>
+<li>Also did I mention we can nest lists like this using
+indentation?</li>
+<li>It’s true!
+<ul>
+<li>You can clearly see that we are getting nested lists.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>And:</p>
+<ol type="1">
+<li>To answer Jake’s question,
+<ol start="2" type="1">
+<li>If it doesn’t work, it might be a quirk of the GFM spec, not HTML or
+Markdown itself.</li>
+</ol></li>
+</ol>
+<ol>
+<li>
+First thing
+</li>
+<li>
+Second thing
+<ol>
+<li>
+Second thing, first subthing
+</li>
+<li>
+Second thing, 2nd subthing
+<ol>
+<li>
+2nd thing, 2nd subthing, 1st subsubthing
+</li>
+</ol>
+<pre><code>&lt;/ol&gt;&lt;/li&gt;</code></pre>
+</ol>
+<h2 id="code">CODE</h2>
+<p>To add code to your documents, you have two options depending on
+context.</p>
+<h3 id="inline-code">Inline Code</h3>
+<p>For code in line, mark the <code>code</code> portion with backticks.
+(This is the character to the left of the <code>1</code> key.)</p>
+<p><strong>Example:</strong> Help, my <code>addTwo</code> function
+doesn’t seem to work, the last line of the function is
+<code>return x + 2</code> but it isn’t doing that?</p>
+<h3 id="code-blocks">Code Blocks</h3>
+<p>What if you have several lines of code, like an HTML element with
+several child elements or a JavaScript function that goes on for like
+five lines? We can represent that in the code like so:</p>
+<pre><code>&lt;p&gt;Write your code here! Anything will be interpreted *literally*.&lt;/p&gt;</code></pre>
+<p>Done. But wait, there’s more! That code was HTML, let’s see if we can
+take advantage of that.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;p&gt;&lt;em&gt;</span>This<span class="kw">&lt;/em&gt;</span> code is syntax-highlit? Or is it <span class="kw">&lt;span</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;unsure-content&quot;</span><span class="kw">&gt;</span>&quot;highlighted&quot;<span class="kw">&lt;/span&gt;</span>?<span class="kw">&lt;/p&gt;</span></span></code></pre></div>
+<p>Available values for language (relevant to this class) include
+“html”, “css”, “javascript” or just “js”, and probably a million
+more.</p>
+<h2 id="other-little-tricks">Other Little Tricks</h2>
+<h3 id="horizontal-lines">Horizontal Lines</h3>
+<p>For a line across, let’s just verify:</p>
+<hr />
+<p>Or:</p>
+<hr />
+<h2 id="links">Links</h2>
+<p>Remember, our example <code>README.md</code> that we were looking at
+is <a href="https://github.com/adap/flower/blob/main/README.md">the
+README for flower on GitHub</a>.</p>
+<p>Sometimes a Markdown compiler/parser/tool will also support adding
+<code>a</code> tags to bare links like google.com. But in most cases
+not. If you just want the link text to <em>be</em> the URL.</p>
+<h2 id="images-for-funsies-and-actual-legit-uses">Images (for funsies
+and actual legit uses)</h2>
+<p>All an image is, is a link tag preceded by an exclamation point.
+Observe!</p>
+<figure>
+<img
+src="https://www.thespruce.com/thmb/E9MczWg73Q-SRuvvVG-7VaXrE4I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/brown-pelican-a7fa2b8e21e84f61bc520cc87af63125.jpg"
+alt="alt text goes here" />
+<figcaption aria-hidden="true">alt text goes here</figcaption>
+</figure>
+<h2 id="and-lastly-the-big-secret">And, Lastly, the Big Secret!!</h2>
+<p>Markdown is what we call a “strict subset” of HTML. What this means
+is that <strong>every HTML document <em>is</em> a markdown
+document</strong>. Let me prove it to you.</p>
+<p><em>Italicized text!</em></p>
+<p>
+Arbitrary <code>HTML</code> goes here!
+</p>
+<p>Actually, darn, I should have been typing that. Let me repeat: if we
+need to, we can always use HTML in our Markdown documents. Here are a
+few examples of when you might want to do that.</p>
+<p><span style="color: red">This text is red.</span></p>
+<h2 id="commenting">Commenting</h2>
+<!-- this is a comment -->
+<p>I swear, there is a comment above this in the source!</p>
