@@ -60,7 +60,7 @@ console.log(0 || 4)
 // 2. truthy strings are ALL NONEMPTY STRINGS (i.e. everything except '' and "")
 // 3. the only truthy boolean is true
 
-console.log(Boolean(0))
+console.log(Boolean(-47))
 
 
 // motivation via if statements
