@@ -89,7 +89,7 @@ for (const i in nums) {
 
 
 
-// function definitions
+//#region function definitions
 // start with the word function, the name of the function,
 //    and the arguments (in, a, list, like, this)
 
@@ -106,7 +106,7 @@ function squaredAverage (arg0, arg1) {
 const sqAvg45 = squaredAverage(4, 5)
 console.log(sqAvg45)
 
-
+//#endregion
 
 
 
