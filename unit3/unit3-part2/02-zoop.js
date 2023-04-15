@@ -24,15 +24,20 @@ class Zoo {
 
 
 class Animal {
-  constructor (species, name, age, sound) {
+  constructor (species, name, birthdate, adoptiondate, sound) {
     this.species = species
     this.name = name
-    this.age = age
+    this.birthdate = birthdate
+    this.adoptiondate = adoptiondate
     this.sound = sound
   }
 
   getAge () {
-    return this.age
+    return (new Date()).getFullYear() - this.birthdate.getFullYear()
+  }
+
+  getTimeAtZoo () {
+    return (new Date()).getFullYear() - this.adoptiondate.getFullYear()
   }
 }
 
@@ -56,24 +61,30 @@ ourZoo.printBanner()
 
 
 const frank = new Animal(
-  'chimpanzee', 'Frank', 4, 'I want banana'
+  'chimpanzee',
+  'Frank',
+  new Date(2017, 4, 12),
+  new Date(2020, 6, 10),
+  'I want banana'
 )
 ourZoo.addAnimal(frank)
 
-const amelia = new Animal(
-  'hippopotamus', 'Amelia', 6, 'roar'
-)
-ourZoo.addAnimal(amelia)
+// const amelia = new Animal(
+//   'hippopotamus', 'Amelia', 6, 'roar'
+// )
+// ourZoo.addAnimal(amelia)
 
-const tom = new Animal(
-  'lemur', 'Tom Bergeron', 2, 'squeak'
-)
-ourZoo.addAnimal(tom)
+// const tom = new Animal(
+//   'lemur', 'Tom Bergeron', 2, 'squeak'
+// )
+// ourZoo.addAnimal(tom)
+
+const frankAge = frank.getTimeAtZoo()
+
+console.log(frankAge)
 
 
 
 
 
-
-
-ourZoo.paradeZoo()
+// ourZoo.paradeZoo()
