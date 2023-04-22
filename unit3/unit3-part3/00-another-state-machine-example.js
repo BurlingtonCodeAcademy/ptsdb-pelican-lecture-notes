@@ -17,6 +17,9 @@ const map = {
     Detroit: 200
   },
   Louisville: {
+    Indianapolis: 150,
+    Columbus: 100,
+    Cincinatti: 125,
     Nashville: 175
   },
   Nashville: {
