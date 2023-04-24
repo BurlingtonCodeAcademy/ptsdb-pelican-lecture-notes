@@ -1,0 +1,9 @@
+img#main-eel {
+  max-width: 60rem;
+}
+
+div#aqua-box {
+  max-width: 100%;
+  min-height: 40rem;
+  border: solid black 4px;
+}
