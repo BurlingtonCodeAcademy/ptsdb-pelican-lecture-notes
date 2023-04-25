@@ -5,6 +5,7 @@ const ourEels = {}
 
 const aquaBox = document.getElementById('aqua-box')
 // const eelName = document.getElementById('eel-name')
+// can use document.querySelector instead
 const eelName = document.querySelector('#eel-name')
 
 function addNewEel() {
@@ -21,6 +22,7 @@ function addNewEel() {
   deleteButton.addEventListener('click', () => {
     aquaBox.removeChild(newEel)
     delete ourEels[name]
+    eelName.value = ''
     document.body.removeChild(deleteButton)
   })
   document.body.appendChild(deleteButton)
