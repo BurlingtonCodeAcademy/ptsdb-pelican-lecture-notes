@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #2d3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .balance {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .balance h3 {
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2d3e50;
+            color: white;
+        }
+
+        tr:hover {background-color: #f1f1f1;}
+
+        form {
+            width: 80%;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Bank Website
+    </header>
+    <div class="container">
+        <button id="launder">Launder Money</button>
+        <div class="balance">
+            <h3>Current Balance: $2,410</h3>
+        </div>
+        <h3>Latest Transactions</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-04-25</td>
+                    <td>Amazon Purchase</td>
+                    <td>-$25.00</td>
+                </tr>
+                <tr>
+                    <td>2023-04-24</td>
+                    <td>Salary</td>
+                    <td>+$2,500.00</td>
+                </tr>
+                <tr>
+                    <td>2023-04-23</td>
+                    <td>Grocery Shopping</td>
+                    <td>-$65.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form>
+        <h2>Add Transaction</h2>
+        <label for="date"></label>
+        <input type="date" name="date" id="addTransDate">
+        <label for="description"></label>
+        <input type="text" name="description" id="addTransDesc">
+        <label for="amount"></label>
+        <input type="number" name="amount" id="addTransAmt">
+        <button type="button" id="addTransSubmit">Submit</button>
+    </form>
+    <script src="bank2.js"></script>
+</body>
+</html>
