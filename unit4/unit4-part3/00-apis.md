@@ -126,3 +126,32 @@ Base types: strings, numbers, boolean.
 # APIs and Getting Data
 
 When we ask a server for data, it will very often give it to us as JSON data. This is good because JSON can easily be converted into JavaScript data (objects, arrays, etc.) using the async `.json` method on the response object.
+
+
+
+# CRUD
+
+**C**reate, **R**ead, **U**pdate, **D**elete.
+Kind of mapped onto HTTP verbs,
+where create = POST, read = GET, update = PUT or PATCH, and delete = DELETE.
+
+
+# URL Syntax
+
+Earlier we had an example of searching Google with something like:
+`https://google.com/search?q=thing`.
+
+The question mark comes after the endpoint.
+The endpoint is everything up to the question mark.
+After the question mark we have a series of key-value pairs
+where:
+- key-value pairs are separated by ampersands, and
+- keys are separated from values with equal signs
+- all text is encoded correctly.
+
+Example:
+
+`https://www.google.com/search?q=cats+%26+dogs`
+
+Use the built-in `encodeURIComponent` function to encode text that is included in the query params section (everything after the ?).
+

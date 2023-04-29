@@ -18,7 +18,7 @@
 
   <script>
     const BASEURL = 'https://pokeapi.co/api/v2'
-    
+
     const h1 = document.getElementById('poke-name')
     const img = document.getElementById('poke-pic')
     const weightSpan = document.getElementById('weight-span')
@@ -30,8 +30,15 @@
       const pokemonInput = document.getElementById('pokemon-input')
       const pokeToFetch = pokemonInput.value
       const url = `${BASEURL}/pokemon/${pokeToFetch}`
-      const response = await fetch(url)
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'x-unnecessary-header': 'banana'
+        }
+      })
       const body = await response.json()
+      // one other way to write the above two lines
+      // const body = await (await fetch(url)).json()
       console.log(body)
 
       // now put the data on the page
