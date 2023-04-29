@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Eli T. Drumm",
+    "age": 33,
+    "pets": [
+      {
+        "type": "dog",
+        "name": "Shannon"
+      }
+    ]
+  },
+  {
+    "name": "Henry Dufour",
+    "age": 7,
+    "pets": [
+      {
+        "type": "dog",
+        "name": "Frankie"
+      },
+      {
+        "type": "dog",
+        "name": "Paxlovid"
+      }
+    ]
+  }
+]
