@@ -91,6 +91,7 @@ const response = await fetch(url, {
 })
 ```
 
+The other common use case is setting headers.
 
 
 

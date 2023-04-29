@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="my-form">
+    <input name="my-input" id="my-input">
+    <button type="button">Button 1</button>
+    <button type="reset">Reset</button>
+    <button type="button" id="sub-button">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('my-form')
+    const submitButton = document.getElementById('sub-button')
+    submitButton.addEventListener('click', (e) => {
+      // put any JS here needed to communicate with server
+      const input = form.children[0]
+      console.log(input.value)
+      // use fetch, say
+      fetch('our server URL', {
+        method: 'POST',
+        // something using input.value
+        body: JSON.stringify(input.value) 
+      })
+    })
+  </script>
+</body>
+</html>

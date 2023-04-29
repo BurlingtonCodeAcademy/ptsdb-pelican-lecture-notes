@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokéViewer</title>
+</head>
+<body>
+  <form>
+    <input name="pokemon" id="pokemon-input">
+    <button type="button" id="fetch-button">Fetch Pokémon</button>
+  </form>
+  <h1 id="poke-name"></h1>
+  <img id="poke-pic" />
+  <p>Weight: <span id="weight-span"></span></p>
+  <p>Height: <span id="height-span"></span></p>
+
+  <script>
+    const BASEURL = 'https://pokeapi.co/api/v2'
+    
+    const h1 = document.getElementById('poke-name')
+    const img = document.getElementById('poke-pic')
+    const weightSpan = document.getElementById('weight-span')
+    const heightSpan = document.getElementById('height-span')
+
+    const button = document.getElementById('fetch-button')
+    button.addEventListener('click', async (e) => {
+      // get the data
+      const pokemonInput = document.getElementById('pokemon-input')
+      const pokeToFetch = pokemonInput.value
+      const url = `${BASEURL}/pokemon/${pokeToFetch}`
+      const response = await fetch(url)
+      const body = await response.json()
+      console.log(body)
+
+      // now put the data on the page
+      body.name = body.name[0].toUpperCase() + body.name.slice(1)
+      h1.innerText = body.name
+      img.src = body.sprites.front_default
+      weightSpan.innerText = body.weight
+      heightSpan.innerText = body.height
+    })
+  </script>
+</body>
+</html>
