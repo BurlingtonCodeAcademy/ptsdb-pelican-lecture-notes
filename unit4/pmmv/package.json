@@ -1,0 +1,16 @@
+{
+  "name": "pmmv",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eli T. Drumm",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "is-even": "^1.0.0"
+  }
+}
