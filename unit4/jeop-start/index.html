@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>Jeopardy</h1>
+
+<h2>Round <span id="round-num">1</span></h2>
+
+<div class="grid-container">
+  <div class="grid-item">🐈</div>
+  <div class="grid-item">🐈</div>
+  <div class="grid-item">🐈</div>  
+  <div class="grid-item">🐈</div>
+  <div class="grid-item">🐈</div>
+  <div class="grid-item">🐈</div>  
+  <div class="grid-item q r1 c1">100</div>
+  <div class="grid-item q r1 c2">100</div>
+  <div class="grid-item q r1 c3">100</div>
+  <div class="grid-item q r1 c4">100</div>
+  <div class="grid-item q r1 c5">100</div>
+  <div class="grid-item q r1 c6">100</div>  
+  <div class="grid-item q r2 c1">200</div>
+  <div class="grid-item q r2 c2">200</div>
+  <div class="grid-item q r2 c3">200</div>  
+  <div class="grid-item q r2 c4">200</div>
+  <div class="grid-item q r2 c5">200</div>
+  <div class="grid-item q r2 c6">200</div> 
+  <div class="grid-item q r3 c1">300</div>
+  <div class="grid-item q r3 c2">300</div>
+  <div class="grid-item q r3 c3">300</div>  
+  <div class="grid-item q r3 c4">300</div>
+  <div class="grid-item q r3 c5">300</div>
+  <div class="grid-item q r3 c6">300</div>  
+  <div class="grid-item q r4 c1">400</div>
+  <div class="grid-item q r4 c2">400</div>
+  <div class="grid-item q r4 c3">400</div>  
+  <div class="grid-item q r4 c4">400</div>
+  <div class="grid-item q r4 c5">400</div>
+  <div class="grid-item q r4 c6">400</div>
+  <div class="grid-item q r5 c1">500</div>
+  <div class="grid-item q r5 c2">500</div>
+  <div class="grid-item q r5 c3">500</div>  
+  <div class="grid-item q r5 c4">500</div>
+  <div class="grid-item q r5 c5">500</div>
+  <div class="grid-item q r5 c6">500</div>
+</div>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>
+
+
