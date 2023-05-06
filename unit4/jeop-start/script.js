@@ -12,15 +12,22 @@ const round = document.getElementById('round-num').innerText
 // ]
 
 for (let i = 1; i < 6; i++) {
-  for (const div of document.querySelectorAll(`.r${i}`)) {
-    // i is row number
+  // i is row number
+  const rowClass = `.r${i}`  // for each run through loop: .r1, .r2, etc.
+
+  for (const div of document.querySelectorAll(rowClass)) {
+    // div
     const divClasses = div.className.split(' ')
     // console.log(divClasses)
 
-    // j is column number
+    // for each run through inner loop: c1, c2, etc.
     const colClass = divClasses.find(c => c.startsWith('c'))
+    // example: colClass is 'c2'
+    
+    // j is column number
     const j = colClass[1]
-    // console.log(j)
+    // example: j is '2'
+    
 
     // cells[i - 1][j.toString() + '00'] = div
 
