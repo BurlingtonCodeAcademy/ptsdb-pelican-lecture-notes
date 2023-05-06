@@ -40,7 +40,8 @@ for (let i = 1; i < 6; i++) {
 
     // THIS SECTION IS FOR qs_organized IMPORT
     div.addEventListener('click', () => {
-      const qObj = qs[j - 1][parseInt(round) - 1][i.toString() + '00']
+      // todo: add comment
+      const qObj = qs[parseInt(j) - 1][parseInt(round) - 1][i.toString() + '00']
       console.log(qObj)
     })
   }
