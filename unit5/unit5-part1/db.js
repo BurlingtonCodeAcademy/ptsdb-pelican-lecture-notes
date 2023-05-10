@@ -18,6 +18,12 @@ module.exports = [
         "emoji": "🏃"
     },
     {
+      "id": "006",
+      "author": "Eli T. Drumm",
+      "content": "what up my second post is here",
+      "emoji": null
+    },
+    {
         "id": "004",
         "author": "Ben",
         "content": "Working on a new painting today. #ArtLife",
