@@ -2,7 +2,11 @@
 const express = require('express')
 const router = express.Router()
 
-const db = require('./db')
+const { posts, users } = require('../db')
+// above line also does the next two lines
+// const posts = db.posts
+// const users = db.users
+
 
 function handler (req, res) {
   res.send(req.headers['content-type'])
@@ -17,24 +21,22 @@ router.get('/', handler)
 
 
 router.get('/all', (req, res) => {
-  res.json(db)
+  res.json(posts)
 })
 
 router.get('/:id', (req, res) => {
-  console.log(req.params.id)
-
   // find appropriate post
-  const post = db.find(post => post.id === req.params.id)
+  const post = posts.find(post => post.id === req.params.id)
 
   // send it back to the user
   res.json(post)
 })
 
-router.get('/author/:name', (req, res) => {
-  const posts = db.filter(
-    post => post.author === req.params.name
+router.get('/author/:userId', (req, res) => {
+  const postsFiltered = posts.filter(
+    post => post.userId === parseInt(req.params.userId)
   )
-  res.json(posts)
+  res.json(postsFiltered)
 })
 
 router.post('/new', (req, res) => {
@@ -52,6 +54,7 @@ router.post('/new', (req, res) => {
 
   res.send('added new post')
 })
+
 
 router.put('/:id', (req, res) => {
   let postIndex = db.findIndex(
@@ -102,7 +105,6 @@ router.patch('/:id', (req, res) => {
     updatedFields
   })
 })
-
 
 
 router.delete('/:id', (req, res) => {

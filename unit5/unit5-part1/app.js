@@ -8,7 +8,8 @@ const app = express()
 
 
 
-const postRouter = require('./routes')
+const postRouter = require('./controllers/post')
+const userRouter = require('./controllers/user')
 
 
 // Set global variables
@@ -20,6 +21,7 @@ app.use(express.json())
 
 
 app.use('/post', postRouter)
+app.use('/user', userRouter)
 
 
 
