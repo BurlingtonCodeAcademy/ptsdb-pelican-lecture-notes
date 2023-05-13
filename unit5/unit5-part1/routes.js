@@ -74,13 +74,33 @@ router.patch('/:id', (req, res) => {
   // your code goes here!
 
   // find the right object in the db
+  let post = db.find(
+    post => parseInt(post.id) === parseInt(req.params.id)
+  )
 
   // modify it appropriately
   // NOTE: do not replace the entire object,
   //       just find a way to change the parts that the
   //       request specified
+  const updatedFields = []
+  if (req.body.author !== undefined) {
+    post.author = req.body.author
+    updatedFields.push('author')
+  }
+  if (req.body.content !== undefined) {
+    post.content = req.body.content
+    updatedFields.push('content')
+  }
+  if (req.body.emoji !== undefined) {
+    post.emoji = req.body.emoji
+    updatedFields.push('emoji')
+  }
 
   // send something back to the client confirming the edit
+  res.json({
+    message: `updated record ${post.id}`,
+    updatedFields
+  })
 })
 
 
