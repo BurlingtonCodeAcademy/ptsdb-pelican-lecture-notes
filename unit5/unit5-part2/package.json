@@ -1,0 +1,15 @@
+{
+  "name": "todo-list",
+  "version": "0.0.1",
+  "description": "a to-do list manager",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eli T. Drumm",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
