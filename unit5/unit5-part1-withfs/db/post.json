@@ -1,0 +1,32 @@
+[
+  {
+    "id": "001",
+    "userId": 1,
+    "content": "Starting my day with a delicious cup of coffee! #MorningRituals",
+    "emoji": "☕"
+  },
+  {
+    "id": "002",
+    "userId": 2,
+    "content": "Enjoying the beautiful sunset. #NatureLover",
+    "emoji": "🌅"
+  },
+  {
+    "id": "003",
+    "userId": 3,
+    "content": "Training for the big race next month. #FitnessGoals",
+    "emoji": "🏃"
+  },
+  {
+    "id": "004",
+    "userId": 4,
+    "content": "Working on a new painting today. #ArtLife",
+    "emoji": "🎨"
+  },
+  {
+    "id": "005",
+    "userId": 5,
+    "content": "Baking some cookies for the weekend. #HomeBaker",
+    "emoji": "🍪"
+  }
+]

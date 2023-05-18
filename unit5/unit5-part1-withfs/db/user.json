@@ -1,0 +1,27 @@
+[
+  {
+    "userId": 1,
+    "firstName": "Henry",
+    "lastName": "Dufour"
+  },
+  {
+    "userId": 2,
+    "firstName": "Mary",
+    "lastName": "Reagan"
+  },
+  {
+    "userId": 3,
+    "firstName": "Eli",
+    "lastName": "T. Drumm"
+  },
+  {
+    "userId": 4,
+    "firstName": "Ben",
+    "lastName": "Villa"
+  },
+  {
+    "userId": 5,
+    "firstName": "Kate",
+    "lastName": "Sweeney"
+  }
+]

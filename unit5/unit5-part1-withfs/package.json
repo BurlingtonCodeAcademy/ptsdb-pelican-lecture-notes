@@ -1,0 +1,14 @@
+{
+  "name": "unit5-part1",
+  "version": "0.1.0",
+  "description": "demo server",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "Eli T. Drumm",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
