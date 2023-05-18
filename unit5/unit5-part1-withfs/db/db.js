@@ -21,6 +21,7 @@ async function readDb(dbname) {
 // hardcodes the value of one argument to readDb
 // and calls readDb on the one argument every time
 const readPosts = async () => await readDb('post')
+const readUsers = async () => await readDb('user')
 
 
 // another function to write them to disk
@@ -37,7 +38,7 @@ async function writeDb(dbname, data) {
 module.exports = {
   readDb,
   writeDb,
-  readPosts
+  readPosts, readUsers
 }
 
 
